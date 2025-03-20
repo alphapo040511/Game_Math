@@ -11,6 +11,11 @@ public class MouseFollow3D : MonoBehaviour
 
     private Vector3 targetPosition;
 
+    void Start()
+    {
+        targetPosition = transform.position;
+    }
+
     void Update()
     {
         //마우스 왼쪽 버튼 클릭
