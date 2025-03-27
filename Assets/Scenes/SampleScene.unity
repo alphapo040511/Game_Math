@@ -715,6 +715,9 @@ GameObject:
   - component: {fileID: 2141878071}
   - component: {fileID: 2141878075}
   - component: {fileID: 2141878076}
+  - component: {fileID: 2141878077}
+  - component: {fileID: 2141878078}
+  - component: {fileID: 2141878079}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -829,9 +832,50 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141878070}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 588a7b1a84c2d254691f8567a6626ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 899317526}
+--- !u!114 &2141878077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141878070}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37b46fb530a099b47b24df6df9f4fd9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 899317526}
+  viewAngle: 60
+--- !u!114 &2141878078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141878070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6079e1ef5105498469f43d82e1f36e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewAngle: 60
+  viewDistance: 5
+--- !u!114 &2141878079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141878070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2196cf752c163bc46b84e823bf9a042b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 899317526}
