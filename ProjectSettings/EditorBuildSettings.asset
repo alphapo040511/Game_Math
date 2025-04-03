@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/EscapePrison.unity
-    guid: b6f0937bc8dfe8d4ebb59bb497b7f624
+    path: Assets/Scenes/CriAndGacha.unity
+    guid: f56e936e6e054d14e9546a026eabc608
   m_configObjects: {}
