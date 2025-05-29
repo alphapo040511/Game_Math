@@ -20,7 +20,7 @@ public class MouseFollow3D : MonoBehaviour
     {
         //마우스 왼쪽 버튼 클릭
          
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(1))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
