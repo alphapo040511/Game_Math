@@ -37,7 +37,7 @@ public class ProjectileTargeting : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                level++;
+                level = Mathf.Min(4, level + 1);
                 //·¹º§ ¾÷
                 for(int i = 0; i < 5; i++)
                 {

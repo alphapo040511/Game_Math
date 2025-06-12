@@ -6,9 +6,10 @@ public class MinionStatus : MonoBehaviour
 {
     private int hp = 10;
 
-    public void TakeDamage()
+    public void TakeDamage(int damage = 1)
     {
-        if(--hp <= 0)
+        hp -= damage;
+        if(hp <= 0)
         {
             Destroy(gameObject);
         }
