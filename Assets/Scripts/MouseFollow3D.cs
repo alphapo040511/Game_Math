@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class MouseFollow3D : MonoBehaviour
+public class MouseFollow3D : IMovedObject
 {
     public float speed = 5f;
 
@@ -29,6 +29,8 @@ public class MouseFollow3D : MonoBehaviour
                 targetPosition = hit.point;
             }
         }
+
+        if (currentState != ObjectStats.Idel) return;
 
         targetPosition.y = transform.position.y;
         Vector3 direcion = (targetPosition - transform.position).normalized;

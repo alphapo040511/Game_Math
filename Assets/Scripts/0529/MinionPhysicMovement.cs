@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MinionPhysicMovement : MonoBehaviour
+public class MinionPhysicMovement : IMovedObject
 {
     public float speed = 5f;
 
@@ -27,10 +27,20 @@ public class MinionPhysicMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        _rigidbody.velocity = direct * speed;
-        if (direct != Vector3.zero)
+        float velY = _rigidbody.velocity.y;
+        Vector3 vel = direct * speed;
+        vel.y += velY;
+
+        if (currentState != ObjectStats.Idel)
+        {
+            _rigidbody.velocity += Vector3.up * velY;
+            return;
+        }
+
+        _rigidbody.velocity = vel;
+        if (_rigidbody.velocity != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(_rigidbody.velocity.normalized);
             _rigidbody.MoveRotation(Quaternion.Slerp(_rigidbody.rotation, targetRotation, 
